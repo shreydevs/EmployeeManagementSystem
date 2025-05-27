@@ -1,12 +1,37 @@
-# React + Vite
+Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based Task Management System that allows an **Admin** to create and assign tasks to **Employees**, who can then view their tasks and status updates.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
 
-## Expanding the ESLint configuration
+Admin
+- Login as admin using predefined credentials.
+- Create tasks with title, description, date, category, and assigned employee.
+- View task counts for each employee (new, active, completed, failed).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Employee
+- Login using individual credentials.
+- View assigned tasks.
+- Track task status (new, active, completed, failed).
+
+Local Storage
+- User data and tasks are stored persistently in browser localStorage.
+- Admin task updates and employee data updates are saved automatically.
+
+
+Login Credentials
+
+Admin
+- **Email**: `admin@me.com`
+- **Password**: `123`
+
+Employees
+- Set up inside `LocalStorage.js` or through localStorage defaults.
+- Each employee has an `email` and `password`.
+
+NOTE:
+On first run, make sure localStorage is initialized using the setLocalStorage() function in App.jsx. You can uncomment and run this once to populate data.
+
+
+
