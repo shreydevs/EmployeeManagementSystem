@@ -10,10 +10,12 @@ const App = () => {
 
   const [userData,setUserData]=useContext(AuthContext)
 
- // Uncomment this and run for the first time, so that the JSON data in LocalStorage.jsx is stored in your Browser's Local Storage
-  // useEffect(() => {
-  //   setLocalStorage();
-  // },)
+ useEffect(() => {
+    const hasData = localStorage.getItem("employees");
+    if (!hasData) {
+      setLocalStorage();
+    }
+  }, []);
   
   
   useEffect(()=>{
